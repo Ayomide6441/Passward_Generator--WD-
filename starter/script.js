@@ -73,18 +73,12 @@ for (let i = 1; i <= num_letters; i++) {
   );
 }
 
-// for (let i = 1; i <= num_symbols; i++) {
-//   password_list.push(
-//     SPECIAL_CHARACTERS[Math.floor(Math.random() * SPECIAL_CHARACTERS.length)]
-//   );
-// }
+// loop through the SPECIAL_CHARACTERS array here
 
-// for (let i = 1; i <= num_numbers; i++) {
-//   password_list.push(NUMBERS[Math.floor(Math.random() * NUMBERS.length)]);
-// }
+// loop through the NUMBERS array here
 
-// password_list.sort(() => Math.random() - 0.5);
-// for (let i of password_list) {
-//   password += i;
-// }
-console.log(`Your password is ${password}`);
+// sort the array here
+
+// loop throught the password_list here
+
+alert(`Your password is ${password}`);

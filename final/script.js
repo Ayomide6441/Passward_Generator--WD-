@@ -84,7 +84,8 @@ for (let i = 1; i <= num_numbers; i++) {
 }
 
 password_list.sort(() => Math.random() - 0.5);
+100;
 for (let i of password_list) {
   password += i;
 }
-console.log(`Your password is ${password}`);
+alert(`Your password is ${password}`);

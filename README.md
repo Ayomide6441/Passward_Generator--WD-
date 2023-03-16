@@ -1,4 +1,4 @@
-# Brand Name Generator
+# Password Generator
 
 ## Introduction
 
@@ -13,26 +13,27 @@ Generating a very strong password is needed to secure our accounts but it can be
 
 A part of the code has been written for you in the script.js file. There is an array of numbers, an array of special characters and an array of alphabets. The password will be from these arrays. There is also a `password_list` array which is empty and a `password` variable with empty string. These two will be talked about later.
 
--
-- Write a prompt function that asks the user which city they grew up in and save their response in a variable.
-- Write another prompt function that asks the user the name of their pet and save their response in a variable
-- Remember a prompt function can be used to ask a user a question
-- Example:
+- To start with we need to ask the users how many symbols,numbers and alphabets they want in their password. `This has been written for you`.
 
-        const name = prompt("What is your name ?");
+        console.log("Welcome to the My Password Generator!");
+        let num_letters = parseInt(prompt("How many letters would you like in your password?"));
+        let num_symbols = parseInt(prompt("How many symbols would you like?"));
+        let num_numbers = parseInt(prompt("How many numbers would you like?"));
+
+- After that, we loop through the arrays created to generate the password. For example , the `ALPHABETIC_CHARACTERS`. The array has been looped based on the number of alphabets the user wants for you and the result was added to the `password_list` array.
+
+  - You will do the same for the `SPECIAL_CHARACTERS` and `NUMBERS` array.
 
 ## Part 2
 
-After asking for the city the user grew up and their pet's name in part 1, you will now use the response to generate a brand name for the user. Follow the steps below to acheive this
+After completing part 1 , you should have the generated password in an array but it can't be displayed to users as an array. Now you will make the array a string. Follow the steps below to complete this.
 
-- Write an `alert` function to tell the user the name you suggest for their brand
-- Remember an `alert` function is used to deliver a message to a user
-- Example:
+- Before you change the array to a string, you will see that the array is has a specifc order. That is, the alphabets come first, then the special characters and numbers. This will still make it easy for hackers to hack. We can make it better by making the arrangement scattered. To do this we are going to sort the array. Use the code below to acheive this
 
-        alert("My name is Simeon");
+        password_list.sort(() => Math.random() - 0.5);
 
-- Suppose the city one of the users grew up in is Lagos and the name of their pet is Bingo, let the message passed to the alert function be in the format
+- Now that you have the sorted, you can now loop through the `password_list` array and put it in the `password` variable as a string.
 
-       alert("The name of your brand can be Lagos Bingo");
+- After this the password will be displayed for the users to see.
 
 **If you get stuck while trying to solve this problem, search for possible solutions online. If you still can't solve the problem then you should check the final folder**
